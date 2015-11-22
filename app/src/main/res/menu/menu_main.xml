@@ -1,0 +1,68 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.android.menuexercise.MainActivity">
+    <item
+        android:id="@+id/settings_menu"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <!-- Menu with image -->
+    <item
+        android:id="@+id/image_menu"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:orderInCategory="200"
+        android:title="@string/image_menu"
+        app:showAsAction="ifRoom"/>
+    <!-- Sub Menu example -->
+    <item
+        android:id="@+id/file_menu"
+        android:orderInCategory="300"
+        android:title="@string/file_menu"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/file_sub_menu_1"
+                android:title="@string/file_sub_menu_1"/>
+            <item
+                android:id="@+id/file_sub_menu_2"
+                android:title="@string/file_sub_menu2"/>
+        </menu>
+    </item>
+    <!-- Group Menu (created here as submenu but can be created as main also) -->
+    <item
+        android:id="@+id/group_menu_item"
+        android:orderInCategory="400"
+        android:title="@string/group_menu">
+        <menu>
+            <group android:id="@+id/group_menu">
+
+                <item
+                    android:id="@+id/group_item_1"
+                    android:title="@string/group_item_1"/>
+                <item
+                    android:id="@+id/group_item_2"
+                    android:title="@string/group_item_2"/>
+            </group>
+        </menu>
+    </item>
+    <!-- Checkable Group Menu (created here as submenu but can be created as main also) -->
+    <item
+        android:id="@+id/group_checkable"
+        android:orderInCategory="500"
+        android:title="@string/group_checkable">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/group_check_red"
+                    android:title="@string/red"/>
+                <item
+                    android:id="@+id/group_check_blue"
+                    android:title="@string/blue"/>
+                <item
+                    android:id="@+id/group_check_green"
+                    android:title="@string/green"/>
+            </group>
+        </menu>
+    </item>
+</menu>
